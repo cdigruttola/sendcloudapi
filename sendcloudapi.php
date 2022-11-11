@@ -72,7 +72,7 @@ class Sendcloudapi extends Module
         }
 
         return parent::install() &&
-            $this->registerHook('header');
+            $this->registerHook('displayHeader');
     }
 
     public function uninstall($reset = false)
@@ -204,7 +204,7 @@ class Sendcloudapi extends Module
     /**
      * Add the CSS file you want to be added on the FO.
      */
-    public function hookHeader()
+    public function hookDisplayHeader()
     {
         $this->context->controller->addCSS($this->_path . '/views/css/front.css');
     }
