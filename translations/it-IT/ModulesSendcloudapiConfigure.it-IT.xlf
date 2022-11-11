@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file original="admin528l3nsyb" source-language="it-IT" target-language="it-IT" datatype="plaintext">
+    <body>
+      <trans-unit id="7965a096c77a6bed0c2c8143052c3e52">
+        <source>SendCloud API</source>
+        <target>SendCloud API</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="179fe026f5cad098e937c7074d308d67">
+        <source>Expose SendCloud API</source>
+        <target>Espone SendCloud API</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="95e4110cd23a70ec3275baa3b7c98424">
+        <source>This module exposes SendCloud API to call</source>
+        <target>Questo modulo espone le API SendCloud da chiamare</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="fa5b21e56b81a8076963f15d6b75eefa">
+        <source>For tracking a page is available to insert tracking code and view tracking status</source>
+        <target>Per il tracking è disponibile una pagina in cui inserire in codice di tracciamento e vederne lo stato</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="5b6cf869265c13af8566f192b4ab3d2a">
+        <source>Documentation</source>
+        <target>Documentazione</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="dfc94e8224bbd24aa039a3c79fbb9d4e">
+        <source>You can get a PDF documentation to configure this module</source>
+        <target>Puoi scaricare la documentazione per configurare questo modulo</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="78463a384a5aa4fad5fa73e2f506ecfc">
+        <source>English</source>
+        <target>Inglese</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="4be8e06d27bca7e1828f2fa9a49ca985">
+        <source>Italian</source>
+        <target>Italiano</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="a82be0f551b8708bc08eb33cd9ded0cf">
+        <source>Information</source>
+        <target>Informazioni</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="8677d887dd5a787c497174a5e6d8bb92">
+        <source>Base Tracking URL is</source>
+        <target>L'URL per il tracking è</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="249058885a4087c165a96901e22b2b07">
+        <source>Copy and paste in your carrier configuration</source>
+        <target>Copialo e incollalo nella configurazione dei corrieri</target>
+        <note>Line: </note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

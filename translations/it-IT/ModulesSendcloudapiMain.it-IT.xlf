@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file original="admin528l3nsyb" source-language="it-IT" target-language="it-IT" datatype="plaintext">
+    <body>
+      <trans-unit id="7965a096c77a6bed0c2c8143052c3e52">
+        <source>SendCloud API</source>
+        <target>SendCloud API</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="179fe026f5cad098e937c7074d308d67">
+        <source>Expose SendCloud API</source>
+        <target>Espone SendCloud API</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="92d4773a9f32fc3333cb8238471cf763">
+        <source>You have to enable the cURL extension on your server to install this module</source>
+        <target>You have to enable the cURL extension on your server to install this module</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="e316b4398212d473f7f53c7728fe1c37">
+        <source>Settings updated succesfully</source>
+        <target>Impostazioni aggiornate con successo</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="003b06dcfe67596f17e3de26e6a436c8">
+        <source>Error occurred during settings update</source>
+        <target>È avvenuto un errore durante l'aggiornamento delle impostazioni</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="f4f70727dc34561dfde1a3c529b6205c">
+        <source>Settings</source>
+        <target>Impostazioni</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="2e6b2f6ae94bc96a970ed183a9b112ee">
+        <source>Enter SendCloud API Public KEY</source>
+        <target>Inserisci la chiave pubblica delle API SendCloud</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="dbfbc238ae0ff3b28128fa39c6a8c2ad">
+        <source>SendCloud API Public KEY</source>
+        <target>Chiave pubblica delle API SendCloud</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="63ee144f820936f29a774264010d05ba">
+        <source>Enter SendCloud API Secret KEY</source>
+        <target>Inserisci la chiave segreta delle API SendCloud</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="40eca39fc7f238f4d32c02041b0d9285">
+        <source>SendCloud API Secret KEY</source>
+        <target>Chiave segreta delle API SendCloud</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="c9cc8cce247e49bae79f15173ce97354">
+        <source>Save</source>
+        <target>Salva</target>
+        <note>Line: </note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

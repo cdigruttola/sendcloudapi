@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file original="admin528l3nsyb" source-language="it-IT" target-language="it-IT" datatype="plaintext">
+    <body>
+      <trans-unit id="2205dc082ba550b67ad71e3e2241d9a6">
+        <source>Tracking</source>
+        <target>Tracking</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="8eea62084ca7e541d918e823422bd82e">
+        <source>Result</source>
+        <target>Risultato</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="348dd805b7d37962898c45aef52afed7">
+        <source>Your tracking code</source>
+        <target>Codice tracking</target>
+        <note>Line: </note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
