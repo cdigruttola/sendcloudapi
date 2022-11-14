@@ -72,7 +72,8 @@ class Sendcloudapi extends Module
         }
 
         return parent::install() &&
-            $this->registerHook('displayHeader');
+            $this->registerHook('displayHeader') &&
+            $this->registerHook('actionFrontControllerSetVariables');
     }
 
     public function uninstall($reset = false)
@@ -207,6 +208,27 @@ class Sendcloudapi extends Module
     public function hookDisplayHeader()
     {
         $this->context->controller->addCSS($this->_path . '/views/css/front.css');
+    }
+
+    public function hookActionFrontControllerSetVariables($params)
+    {
+        if (!$this->active) {
+            return false;
+        }
+        if (!isset($params['templateVars'])) {
+            return false;
+        }
+        $page = [
+            'title' => 'Tracking',
+            'canonical' => $this->context->link->getModuleLink($this->name, 'tracking'),
+            'meta' => [
+                'title' => 'Tracking',
+                'description' => 'Tracking',
+                'keywords' => 'Tracking',
+                'robots' => 'index',
+            ],
+        ];
+        return array_merge($page, $params['templateVars']['page']);
     }
 
 }
