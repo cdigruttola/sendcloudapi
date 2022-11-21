@@ -12,9 +12,24 @@
         <target>Risultato</target>
         <note>Line: </note>
       </trans-unit>
+      <trans-unit id="57d6ac03c50b8e00b100520f06015adb">
+        <source>Follow on carrier site</source>
+        <target>Segui sul sito del corriere</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="14aa22a7134bea0e36ac915c8a135b98">
+        <source>Expect shipping for</source>
+        <target>Spedizione prevista per</target>
+        <note>Line: </note>
+      </trans-unit>
       <trans-unit id="348dd805b7d37962898c45aef52afed7">
         <source>Your tracking code</source>
         <target>Codice tracking</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="5c0f489b7074e4bc26f10b534829bfb8">
+        <source>Expect delivery</source>
+        <target>Consegna stimata</target>
         <note>Line: </note>
       </trans-unit>
     </body>

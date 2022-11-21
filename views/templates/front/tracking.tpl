@@ -47,7 +47,7 @@
                          target="_blank">{l s='Follow on carrier site' d='Modules.Sendcloudapi.Tracking'}</a></span>
             </div>
             {if $smarty.now|date_format:'%Y-%m-%d' < $tracking.expected_delivery_date|strtotime|date_format:'%Y-%m-%d'}
-                <p>{l s='Expect delivery' d='Modules.Sendcloudapi.Tracking'}: {$tracking.expected_delivery_date|strtotime|date_format:'%A %d/%m/%Y'}</p>
+                <p>{l s='Expect shipping for' d='Modules.Sendcloudapi.Tracking'} {$tracking.expected_delivery_date|strtotime|date_format:'%A %d/%m/%Y'}</p>
             {/if}
             <br/>
             {assign carrier_code $tracking.carrier_code|ucfirst|replace:'_':' '}
