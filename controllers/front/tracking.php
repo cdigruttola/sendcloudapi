@@ -42,6 +42,13 @@ class SendcloudapiTrackingModuleFrontController extends ModuleFrontController
         $this->trackingTranslations = $trackingTranslations->getTranslations($this->context->language->iso_code);
     }
 
+    public function getTemplateVarPage()
+    {
+        $page = parent::getTemplateVarPage();
+        $page['meta']['title'] = 'Tracking';
+        return $page;
+    }
+
 
     public function initContent()
     {
