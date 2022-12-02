@@ -40,6 +40,7 @@ class Sendcloudapi extends Module
         $this->version = '1.0.0';
         $this->author = 'cdigruttola';
         $this->need_instance = 0;
+        $this->controllers = ['tracking'];
 
         /**
          * Set $this->bootstrap to true if your module is compliant with bootstrap (PrestaShop 1.6)
@@ -72,8 +73,7 @@ class Sendcloudapi extends Module
         }
 
         return parent::install() &&
-            $this->registerHook('displayHeader') &&
-            $this->registerHook('actionFrontControllerSetVariables');
+            $this->registerHook('displayHeader');
     }
 
     public function uninstall($reset = false)
@@ -208,27 +208,6 @@ class Sendcloudapi extends Module
     public function hookDisplayHeader()
     {
         $this->context->controller->addCSS($this->_path . '/views/css/front.css');
-    }
-
-    public function hookActionFrontControllerSetVariables($params)
-    {
-        if (!$this->active) {
-            return false;
-        }
-        if (!isset($params['templateVars'])) {
-            return false;
-        }
-        $page = [
-            'title' => 'Tracking',
-            'canonical' => $this->context->link->getModuleLink($this->name, 'tracking'),
-            'meta' => [
-                'title' => 'Tracking',
-                'description' => 'Tracking',
-                'keywords' => 'Tracking',
-                'robots' => 'index',
-            ],
-        ];
-        return array_merge($page, $params['templateVars']['page']);
     }
 
 }

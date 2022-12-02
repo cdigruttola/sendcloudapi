@@ -34,7 +34,7 @@
 {assign tracking_common_key constant('\cdigruttola\Module\Sendcloudapi\Translations\TrackingTranslations::TRACKING_COMMON_KEY')}
 
 {block name='page_title'}
-    Tracking
+    {l s='Tracking' d='Modules.Sendcloudapi.Tracking'}
 {/block}
 
 {block name='page_content_container'}
