@@ -81,15 +81,17 @@ class Sendcloudapi extends Module
         if (!$reset) {
             Configuration::deleteByName(self::SENDCLOUD_API_PUBLIC_KEY);
             Configuration::deleteByName(self::SENDCLOUD_API_SECRET_KEY);
+            return parent::uninstall();
         }
-        return parent::uninstall();
+        return true;
     }
 
     public function onclickOption($opt, $href)
     {
-        if ($opt == 'reset') {
+        if ($opt === 'reset') {
             return $this->uninstall(true) && $this->install();
         }
+        return true;
     }
 
     /**
