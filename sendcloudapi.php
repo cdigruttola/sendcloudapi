@@ -22,7 +22,6 @@
  * @copyright Copyright since 2007 Carmine Di Gruttola
  * @license   http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
  */
-
 if (!defined('_PS_VERSION_')) {
     exit;
 }
@@ -42,7 +41,7 @@ class Sendcloudapi extends Module
         $this->need_instance = 0;
         $this->controllers = ['tracking'];
 
-        /**
+        /*
          * Set $this->bootstrap to true if your module is compliant with bootstrap (PrestaShop 1.6)
          */
         $this->bootstrap = true;
@@ -60,7 +59,6 @@ class Sendcloudapi extends Module
         return true;
     }
 
-
     /**
      * Don't forget to create update methods if needed:
      * http://doc.prestashop.com/display/PS16/Enabling+the+Auto-Update
@@ -69,11 +67,12 @@ class Sendcloudapi extends Module
     {
         if (!extension_loaded('curl')) {
             $this->_errors[] = $this->trans('You have to enable the cURL extension on your server to install this module', [], 'Modules.Sendcloudapi.Main');
+
             return false;
         }
 
-        return parent::install() &&
-            $this->registerHook('displayHeader');
+        return parent::install()
+            && $this->registerHook('displayHeader');
     }
 
     public function uninstall($reset = false)
@@ -81,8 +80,10 @@ class Sendcloudapi extends Module
         if (!$reset) {
             Configuration::deleteByName(self::SENDCLOUD_API_PUBLIC_KEY);
             Configuration::deleteByName(self::SENDCLOUD_API_SECRET_KEY);
+
             return parent::uninstall();
         }
+
         return true;
     }
 
@@ -91,6 +92,7 @@ class Sendcloudapi extends Module
         if ($opt === 'reset') {
             return $this->uninstall(true) && $this->install();
         }
+
         return true;
     }
 
@@ -100,13 +102,12 @@ class Sendcloudapi extends Module
     public function getContent()
     {
         $output = '';
-        if ((Tools::isSubmit('submitSendcloudapiModule'))) {
+        if (Tools::isSubmit('submitSendcloudapiModule')) {
             if ($this->postProcess()) {
                 $output .= $this->displayConfirmation($this->trans('Settings updated succesfully', [], 'Modules.Sendcloudapi.Main'));
             } else {
                 $output .= $this->displayError($this->trans('Error occurred during settings update', [], 'Modules.Sendcloudapi.Main'));
             }
-
         }
 
         $this->context->smarty->assign('module_dir', $this->_path);
@@ -184,6 +185,7 @@ class Sendcloudapi extends Module
     protected function getConfigFormValues()
     {
         $id_shop = $this->context->shop->id;
+
         return [
             self::SENDCLOUD_API_PUBLIC_KEY => Configuration::get(self::SENDCLOUD_API_PUBLIC_KEY, null, null, $id_shop),
             self::SENDCLOUD_API_SECRET_KEY => Configuration::get(self::SENDCLOUD_API_SECRET_KEY, null, null, $id_shop),
@@ -201,6 +203,7 @@ class Sendcloudapi extends Module
         foreach (array_keys($form_values) as $key) {
             $res &= Configuration::updateValue($key, Tools::getValue($key));
         }
+
         return $res;
     }
 
@@ -211,5 +214,4 @@ class Sendcloudapi extends Module
     {
         $this->context->controller->addCSS($this->_path . '/views/css/front.css');
     }
-
 }

@@ -79,7 +79,6 @@ class TrackingTranslations
     ];
 
     /**
-     *
      * @return array translation list
      */
     public function getTranslations($isoCode)

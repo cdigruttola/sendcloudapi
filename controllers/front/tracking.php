@@ -1,8 +1,8 @@
 <?php
 
 use cdigruttola\Module\Sendcloudapi\Translations\TrackingTranslations;
-use GuzzleHttp\Exception\ClientException;
 use GuzzleHttp\Client;
+use GuzzleHttp\Exception\ClientException;
 
 /**
  * Copyright since 2007 Carmine Di Gruttola
@@ -29,7 +29,6 @@ use GuzzleHttp\Client;
  */
 class SendcloudapiTrackingModuleFrontController extends ModuleFrontController
 {
-
     /**
      * @var
      */
@@ -47,11 +46,10 @@ class SendcloudapiTrackingModuleFrontController extends ModuleFrontController
         return $this->context->link->getModuleLink($this->module->name, 'tracking');
     }
 
-
     public function initContent()
     {
         parent::initContent();
-        $this->context->smarty->assign(['trackingTranslations' => $this->trackingTranslations,]);
+        $this->context->smarty->assign(['trackingTranslations' => $this->trackingTranslations]);
         $this->setTemplate('module:sendcloudapi/views/templates/front/tracking.tpl');
     }
 
@@ -64,12 +62,12 @@ class SendcloudapiTrackingModuleFrontController extends ModuleFrontController
                 $response = $client->get('https://panel.sendcloud.sc/api/v2/tracking/' . $tracking_code, [
                     'auth' => [
                         Configuration::get(Sendcloudapi::SENDCLOUD_API_PUBLIC_KEY, null, null, $id_shop),
-                        Configuration::get(Sendcloudapi::SENDCLOUD_API_SECRET_KEY, null, null, $id_shop)
-                    ]
+                        Configuration::get(Sendcloudapi::SENDCLOUD_API_SECRET_KEY, null, null, $id_shop),
+                    ],
                 ]);
 
                 $data = json_decode($response->getBody(), true);
-                usort($data['statuses'], fn($a, $b) => strtotime($b['carrier_update_timestamp']) - strtotime($a['carrier_update_timestamp']));
+                usort($data['statuses'], fn ($a, $b) => strtotime($b['carrier_update_timestamp']) - strtotime($a['carrier_update_timestamp']));
                 $this->context->smarty->assign([
                     'tracking' => $data,
                 ]);
@@ -83,23 +81,22 @@ class SendcloudapiTrackingModuleFrontController extends ModuleFrontController
         }
     }
 
-
     public function getBreadcrumbLinks()
     {
         $breadcrumb = parent::getBreadcrumbLinks();
 
         $breadcrumb['links'][] = [
             'title' => $this->getTranslator()->trans('Tracking', [], 'Modules.Sendcloudapi.Tracking'),
-            'url' => $this->context->link->getModuleLink($this->module->name, 'tracking')
+            'url' => $this->context->link->getModuleLink($this->module->name, 'tracking'),
         ];
 
         if (Tools::getValue('tracking_code')) {
             $breadcrumb['links'][] = [
                 'title' => $this->getTranslator()->trans('Result', [], 'Modules.Sendcloudapi.Tracking'),
-                'url' => ''
+                'url' => '',
             ];
         }
+
         return $breadcrumb;
     }
-
 }
