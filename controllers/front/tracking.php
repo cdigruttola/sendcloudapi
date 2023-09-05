@@ -1,9 +1,4 @@
 <?php
-
-use cdigruttola\Module\Sendcloudapi\Translations\TrackingTranslations;
-use GuzzleHttp\Client;
-use GuzzleHttp\Exception\ClientException;
-
 /**
  * Copyright since 2007 Carmine Di Gruttola
  *
@@ -27,6 +22,11 @@ use GuzzleHttp\Exception\ClientException;
  * @copyright Copyright since 2007 Carmine Di Gruttola
  * @license   http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
  */
+
+use cdigruttola\Module\Sendcloudapi\Translations\TrackingTranslations;
+use GuzzleHttp\Client;
+use GuzzleHttp\Exception\ClientException;
+
 class SendcloudapiTrackingModuleFrontController extends ModuleFrontController
 {
     /**

@@ -60,7 +60,7 @@
                         <div class="timeline-info">
                             <div class="timeline_line">
                                 {if isset($tracking_svgs.$parent_status)}
-                                    <div class="tracking-icon bg-primary">{$tracking_svgs.$parent_status nofilter}</div>
+                                    <div class="tracking-icon bg-primary">{$tracking_svgs.$parent_status|cleanHtml nofilter}</div>
                                 {else}
                                     <span class="timeline_dot timeline_dot-inlined"></span>
                                 {/if}
