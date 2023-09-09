@@ -212,6 +212,6 @@ class Sendcloudapi extends Module
      */
     public function hookDisplayHeader()
     {
-        $this->context->controller->addCSS($this->_path . '/views/css/front.css');
+        $this->context->controller->addCSS($this->_path . 'views/css/front.css');
     }
 }
