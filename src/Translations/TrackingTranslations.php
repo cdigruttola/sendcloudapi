@@ -25,6 +25,10 @@
 
 namespace cdigruttola\Module\Sendcloudapi\Translations;
 
+if (!defined('_PS_VERSION_')) {
+    exit;
+}
+
 class TrackingTranslations
 {
     const TRACKING_COMMON_KEY = 'SENDCLOUD_API_TRACKING_STATE_';

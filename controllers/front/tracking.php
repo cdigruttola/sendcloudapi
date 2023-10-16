@@ -27,6 +27,10 @@ use cdigruttola\Module\Sendcloudapi\Translations\TrackingTranslations;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\ClientException;
 
+if (!defined('_PS_VERSION_')) {
+    exit;
+}
+
 class SendcloudapiTrackingModuleFrontController extends ModuleFrontController
 {
     /**
