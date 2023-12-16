@@ -40,9 +40,15 @@ class SendcloudapiTrackingModuleFrontController extends ModuleFrontController
 
     public function init()
     {
+        $this->php_self = 'tracking';
         parent::init();
         $trackingTranslations = new TrackingTranslations();
         $this->trackingTranslations = $trackingTranslations->getTranslations($this->context->language->iso_code);
+    }
+
+    protected function canonicalRedirection($canonical_url = '')
+    {
+        parent::canonicalRedirection($this->context->link->getModuleLink($this->module->name, 'tracking'));
     }
 
     public function getCanonicalURL()
