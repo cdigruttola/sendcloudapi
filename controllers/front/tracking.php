@@ -48,7 +48,8 @@ class SendcloudapiTrackingModuleFrontController extends ModuleFrontController
 
     protected function canonicalRedirection($canonical_url = '')
     {
-        parent::canonicalRedirection($this->context->link->getModuleLink($this->module->name, 'tracking'));
+        $canonical_url = $this->context->link->getModuleLink($this->module->name, 'tracking') . (Tools::getValue('tracking_code') ? '?tracking_code=' . Tools::getValue('tracking_code') : '');
+        parent::canonicalRedirection($canonical_url);
     }
 
     public function getCanonicalURL()
