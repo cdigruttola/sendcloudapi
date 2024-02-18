@@ -40,7 +40,7 @@ class Sendcloudapi extends Module
     {
         $this->name = 'sendcloudapi';
         $this->tab = 'shipping_logistics';
-        $this->version = '1.0.0';
+        $this->version = '1.1.0';
         $this->author = 'cdigruttola';
         $this->need_instance = 0;
         $this->controllers = ['tracking'];
@@ -52,7 +52,7 @@ class Sendcloudapi extends Module
         $this->displayName = $this->trans('SendCloud API', [], 'Modules.Sendcloudapi.Main');
         $this->description = $this->trans('Expose SendCloud API', [], 'Modules.Sendcloudapi.Main');
 
-        $this->ps_versions_compliancy = ['min' => '1.6', 'max' => _PS_VERSION_];
+        $this->ps_versions_compliancy = ['min' => '1.7.8', 'max' => _PS_VERSION_];
     }
 
     public function isUsingNewTranslationSystem()
