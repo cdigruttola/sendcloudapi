@@ -32,7 +32,7 @@
 'SENDCLOUD_API_TRACKING_STATE_DELIVERED' => '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 -1 15 15" version="1.1"><g transform="translate(-185.000000, -1985.000000)" fill="#FFFFFF"><g transform="translate(40.000000, 1680.000000)"><path d="M155.83325,305.5945 C155.68825,305.4475 155.44825,305.4475 155.30225,305.5945 L149.70425,311.1815 C149.55825,311.3305 149.31925,311.3305 149.17325,311.1815 L146.72025,308.6765 C146.64825,308.6035 146.55225,308.5665 146.45725,308.5665 C146.36025,308.5655 146.26225,308.6015 146.18825,308.6765 L145.10525,309.6545 C145.03225,309.7285 144.99325,309.8215 144.99325,309.9185 C144.99325,310.0155 145.03225,310.1185 145.10525,310.1915 L149.17325,314.4055 C149.31925,314.5525 149.55825,314.5525 149.70425,314.4055 L156.89725,307.2065 C157.04325,307.0595 157.04325,306.8165 156.89725,306.6695 L155.83325,305.5945 L155.83325,305.5945 Z"></path></g></g></svg>'
 ]}
 
-{assign tracking_common_key constant('\cdigruttola\Module\Sendcloudapi\Translations\TrackingTranslations::TRACKING_COMMON_KEY')}
+{assign tracking_common_key constant('\cdigruttola\Sendcloudapi\Translations\TrackingTranslations::TRACKING_COMMON_KEY')}
 
 {block name='page_title'}
     {l s='Tracking' d='Modules.Sendcloudapi.Tracking'}

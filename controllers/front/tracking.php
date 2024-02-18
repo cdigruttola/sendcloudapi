@@ -23,7 +23,8 @@
  * @license   http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
  */
 
-use cdigruttola\Module\Sendcloudapi\Translations\TrackingTranslations;
+use cdigruttola\Sendcloudapi\Form\DataConfiguration\SendCloudApiDataConfiguration;
+use cdigruttola\Sendcloudapi\Translations\TrackingTranslations;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\ClientException;
 
@@ -72,8 +73,8 @@ class SendcloudapiTrackingModuleFrontController extends ModuleFrontController
                 $client = new Client();
                 $response = $client->get('https://panel.sendcloud.sc/api/v2/tracking/' . $tracking_code, [
                     'auth' => [
-                        Configuration::get(Sendcloudapi::SENDCLOUD_API_PUBLIC_KEY, null, null, $id_shop),
-                        Configuration::get(Sendcloudapi::SENDCLOUD_API_SECRET_KEY, null, null, $id_shop),
+                        Configuration::get(SendCloudApiDataConfiguration::SENDCLOUD_API_PUBLIC_KEY, null, null, $id_shop),
+                        Configuration::get(SendCloudApiDataConfiguration::SENDCLOUD_API_SECRET_KEY, null, null, $id_shop),
                     ],
                 ]);
 

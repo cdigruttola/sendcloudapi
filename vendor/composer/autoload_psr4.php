@@ -6,5 +6,5 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-    'cdigruttola\\Module\\Sendcloudapi\\' => array($baseDir . '/src'),
+    'cdigruttola\\Sendcloudapi\\' => array($baseDir . '/src'),
 );

@@ -1,0 +1,86 @@
+{# **
+* Copyright since 2007 Carmine Di Gruttola
+*
+* NOTICE OF LICENSE
+*
+* This source file is subject to the Academic Free License (AFL 3.0)
+* that is bundled with this package in the file LICENSE.txt.
+* It is also available through the world-wide-web at this URL:
+* http://opensource.org/licenses/afl-3.0.php
+* If you did not receive a copy of the license and are unable to
+* obtain it through the world-wide-web, please send an email
+* to license@prestashop.com so we can send you a copy immediately.
+*
+* DISCLAIMER
+*
+* Do not edit or add to this file if you wish to upgrade PrestaShop to newer
+* versions in the future. If you wish to customize PrestaShop for your
+* needs please refer to http://www.prestashop.com for more information.
+*
+*  @author    cdigruttola <c.digruttola@hotmail.it>
+*  @copyright Copyright since 2007 Carmine Di Gruttola
+*  @license   http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+* #}
+
+{% extends '@PrestaShop/Admin/layout.html.twig' %}
+{% form_theme configurationForm '@PrestaShop/Admin/TwigTemplateForm/prestashop_ui_kit.html.twig' %}
+
+{% block content %}
+
+  <div class="row justify-content-center">
+    <div class="col-xl-12">
+      <div class="card">
+        <h3 class="card-header"><i
+            class="material-icons">local_shipping</i> {{ 'SendCloud API'|trans({}, 'Modules.Sendcloudapi.Configure' ) }}
+        </h3>
+        <div class="card-body">
+          {{ 'This module exposes SendCloud API to call'|trans({}, 'Modules.Sendcloudapi.Configure') }} <br/>
+          {{ 'For tracking a page is available to insert tracking code and view tracking status'|trans({}, 'Modules.Sendcloudapi.Configure') }}
+        </div>
+      </div>
+    </div>
+    <div class="col-xl-12">
+      <div class="card">
+        <h3 class="card-header"><i
+            class="material-icons">description</i> {{ 'Description'|trans({}, 'Modules.Sendcloudapi.Configure' ) }}
+        </h3>
+        <div class="card-body">
+          &raquo; {{ 'You can get a PDF documentation to configure this module'|trans({}, 'Modules.Sendcloudapi.Configure') }}
+          :
+          <ul>
+            <li><a href="{{ module_dir }}docs/readme_en.pdf"
+                   target="_blank">{{ 'English'|trans({}, 'Modules.Sendcloudapi.Configure') }}</a></li>
+            <li><a href="{{ module_dir }}docs/readme_it.pdf"
+                   target="_blank">{{ 'Italian'|trans({}, 'Modules.Sendcloudapi.Configure') }}</a></li>
+          </ul>
+          <p>{{ 'Base Tracking URL is'|trans({}, 'Modules.Sendcloudapi.Configure') }} <a
+              href="{{ url_tracking }}">{{ url_tracking }}?tracking_code=@</a></p>
+          <p>{{ 'Copy and paste in your carrier configuration'|trans({}, 'Modules.Sendcloudapi.Configure') }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-xl-12">
+      {{ form_start(configurationForm) }}
+      <div class="card">
+        <h3 class="card-header">
+          <i class="material-icons">settings</i> {{ 'Settings'|trans({}, 'Modules.Sendcloudapi.Main') }}
+        </h3>
+        <div class="card-block">
+          <div class="card-body">
+            <div class="form-wrapper">
+              {{ form_widget(configurationForm) }}
+              {{ form_rest(configurationForm) }}
+            </div>
+          </div>
+        </div>
+        <div class="card-footer">
+          <div class="d-flex justify-content-end">
+            <button class="btn btn-primary"
+                    id="form-maintenance-save-button">{{ 'Save'|trans({}, 'Admin.Actions') }}</button>
+          </div>
+        </div>
+      </div>
+      {{ form_end(configurationForm) }}
+    </div>
+  </div>
+{% endblock %}

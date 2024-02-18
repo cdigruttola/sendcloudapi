@@ -23,7 +23,7 @@
  * @license   http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
  */
 
-namespace cdigruttola\Module\Sendcloudapi\Translations;
+namespace cdigruttola\Sendcloudapi\Translations;
 
 if (!defined('_PS_VERSION_')) {
     exit;

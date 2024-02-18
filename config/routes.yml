@@ -1,0 +1,11 @@
+sendcloudapi_controller:
+    path: /sendcloudapi/configuration
+    methods: [GET]
+    defaults:
+        _controller: 'cdigruttola\Sendcloudapi\Controller\SendCloudApiController::index'
+
+sendcloudapi_controller_configuration_save:
+    path: /sendcloudapi/configuration
+    methods: [POST, PATCH]
+    defaults:
+        _controller: 'cdigruttola\Sendcloudapi\Controller\SendCloudApiController::saveConfiguration'

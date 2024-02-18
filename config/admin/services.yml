@@ -1,0 +1,43 @@
+imports:
+  - { resource: ../common.yml }
+
+services:
+  _defaults:
+    public: true
+
+  # Controller
+  cdigruttola\Sendcloudapi\Controller\SendCloudApiController:
+    public: true
+    class: cdigruttola\Sendcloudapi\Controller\SendCloudApiController
+    arguments:
+      - "@=service('prestashop.adapter.legacy.context').getLanguages(false)"
+      - '@cdigruttola.sendcloudapi.module'
+
+  # config form
+  cdigruttola.sendcloudapi.configuration:
+    class: 'cdigruttola\Sendcloudapi\Form\DataConfiguration\SendCloudApiDataConfiguration'
+    arguments:
+      - '@prestashop.adapter.legacy.configuration'
+      - '@prestashop.adapter.shop.context'
+      - '@prestashop.adapter.multistore_feature'
+
+  cdigruttola.sendcloudapi.configuration.form_provider:
+    class: 'cdigruttola\Sendcloudapi\Form\Provider\SendCloudApiConfigurationFormDataProvider'
+    arguments:
+      - '@cdigruttola.sendcloudapi.configuration'
+
+  cdigruttola.sendcloudapi.configuration.form_handler:
+    class: 'PrestaShop\PrestaShop\Core\Form\Handler'
+    arguments:
+      - '@form.factory'
+      - '@prestashop.core.hook.dispatcher'
+      - '@cdigruttola.sendcloudapi.configuration.form_provider'
+      - 'cdigruttola\Sendcloudapi\Form\SendCloudApiConfigurationType'
+      - 'SendCloudApiConfigurationForm'
+
+  cdigruttola.sendcloudapi.form.banner_configuration_type:
+    class: 'cdigruttola\Sendcloudapi\Form\SendCloudApiConfigurationType'
+    parent: 'form.type.translatable.aware'
+    public: true
+    tags:
+      - { name: form.type }

@@ -9,12 +9,12 @@ class ComposerStaticInit2fd8c6c2f8ee628dbbb8c34e8c2b3f6e
     public static $prefixLengthsPsr4 = array (
         'c' => 
         array (
-            'cdigruttola\\Module\\Sendcloudapi\\' => 32,
+            'cdigruttola\\Sendcloudapi\\' => 25,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'cdigruttola\\Module\\Sendcloudapi\\' => 
+        'cdigruttola\\Sendcloudapi\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src',
         ),
@@ -23,6 +23,11 @@ class ComposerStaticInit2fd8c6c2f8ee628dbbb8c34e8c2b3f6e
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'Sendcloudapi' => __DIR__ . '/../..' . '/sendcloudapi.php',
+        'cdigruttola\\Sendcloudapi\\Controller\\SendCloudApiController' => __DIR__ . '/../..' . '/src/Controller/SendCloudApiController.php',
+        'cdigruttola\\Sendcloudapi\\Form\\DataConfiguration\\SendCloudApiDataConfiguration' => __DIR__ . '/../..' . '/src/Form/DataConfiguration/SendCloudApiDataConfiguration.php',
+        'cdigruttola\\Sendcloudapi\\Form\\Provider\\SendCloudApiConfigurationFormDataProvider' => __DIR__ . '/../..' . '/src/Form/Provider/SendCloudApiConfigurationFormDataProvider.php',
+        'cdigruttola\\Sendcloudapi\\Form\\SendCloudApiConfigurationType' => __DIR__ . '/../..' . '/src/Form/SendCloudApiConfigurationType.php',
+        'cdigruttola\\Sendcloudapi\\Translations\\TrackingTranslations' => __DIR__ . '/../..' . '/src/Translations/TrackingTranslations.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
