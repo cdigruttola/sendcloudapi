@@ -20,7 +20,6 @@ class SendCloudApiController extends FrameworkBundleAdminController
         parent::__construct();
         $this->languages = $languages;
         $this->module = $module;
-
     }
 
     public function index(): Response

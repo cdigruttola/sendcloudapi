@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace cdigruttola\Sendcloudapi\Form\DataConfiguration;
 
-use cdigruttola\Module\SimpleBanner\Configuration\SimpleBannerConfiguration;
 use PrestaShop\PrestaShop\Core\Configuration\AbstractMultistoreConfiguration;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
